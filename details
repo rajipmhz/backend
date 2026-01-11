@@ -1,0 +1,45 @@
+# pnpm add express sequelize pg pg-hstore dotenv
+
+# then after we will take the url form the transaction pooler of the supabase
+
+# flow
+
+# users 		   
+# -id		
+# -email		
+# -pwd(hased)-bcrypt
+
+# vendor
+# -id
+# user-id
+# name
+# phone
+# address
+
+# product
+# id
+# vendor_id
+# name
+# price
+
+# customer
+# id
+# user-id
+# name
+# phone
+
+# cart
+# id
+# customer-id
+# product-id
+
+
+
+# signup:singup as vendor/singup as customer
+# login:login as vendor, as customer /jwt token
+
+
+# install copilot for auto code 
+# open ai ko api tana parcha
+
+# migration table create garna parcha to update real term update
