@@ -4,7 +4,7 @@ const { verifyJWTToken } = require("../utills/auth");
 
 const isProtectedRoute=(req,res,next)=>{
     const {token}=req.cookies;
-    console.log('TOKEN',token);
+    // console.log('TOKEN',token);
     if(!token){
         return next(httpError('unauthorize:NO token is created',403));
     }
@@ -19,12 +19,12 @@ const isProtectedRoute=(req,res,next)=>{
 
 const isVendor=(req,res,next)=>{
     if(req.user.type!=='vendor'){
-        return next(httpError('forbidden:Access is allowd for vendors only',403))
+        return next(httpError('forbidden:Access is allowd for vendors only',403));
     }
     next();
 }
 const isCustomer=(req,res,next)=>{
-    isCustomer(req.user.tyep!=='customer'){
+    if(req.user.type!=='customer'){
         return next(httpError('forbidden:Access is allowd for customers only',403));
     }
     next();
@@ -32,4 +32,6 @@ const isCustomer=(req,res,next)=>{
 
 module.exports={
     isProtectedRoute,
+    isVendor,
+    isCustomer
 }

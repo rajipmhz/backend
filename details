@@ -43,3 +43,27 @@
 # open ai ko api tana parcha
 
 # migration table create garna parcha to update real term update
+
+
+
+# create product,update, delete=vendor
+
+# list product
+# filter , search 
+
+
+# login user checkout, add cart 
+
+# hw 
+
+# middleware ma aayako req.body (payload valid cha ke nai )
+# byid/product/:id
+# list
+# update
+# delete
+
+# logic
+# list :get/vendor/proucts/:id   vendorid:userid
+# product.findby({vnedorid:userid})
+
+# /vendor/proucts/:id

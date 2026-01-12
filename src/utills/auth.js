@@ -33,6 +33,6 @@ const verifyJWTToken=(token)=>{
 module.exports={
     encryptPassword,
     verifyPassword,
-    generateJWTToken,
+    generateJWTToken, 
     verifyJWTToken,
 };
