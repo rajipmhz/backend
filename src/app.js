@@ -4,7 +4,8 @@ const sequelize = require('./config/database');
 const cookieParesr=require('cookie-parser');
 const app=express();
 const authRoute=require('./routes/auth/index');
-const {isProtectedRoute, isVendor}=require('./middlerware/auth')
+const {isProtectedRoute, isVendor}=require('./middlerware/auth');
+const { getallProductsController, getSingleProductController } = require('./controller/products');
 
 app.use(express.json());
 app.use(cookieParesr());
@@ -25,6 +26,8 @@ app.get('/',(req,res)=>{
 })
 
 app.use('/auth',authRoute);
+app.get('/products', getallProductsController);
+app.get('/products/:id', getSingleProductController)
 app.use(isProtectedRoute);
 app.use('/vendor',isVendor,require('./routes/vendor'));
 

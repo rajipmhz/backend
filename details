@@ -57,6 +57,7 @@
 # hw 
 
 # middleware ma aayako req.body (payload valid cha ke nai )
+
 # byid/product/:id
 # list
 # update
@@ -67,3 +68,14 @@
 # product.findby({vnedorid:userid})
 
 # /vendor/proucts/:id
+
+# today/hw 
+# /product?limit&offset=4
+# /vendor/product?limit&&offset
+# api
+# /add cart
+# delete cart
+# update cart
+# checkout
+
+# --cart :id,user_id,item-id,noofitem,status:pending, checkout,out of stock
