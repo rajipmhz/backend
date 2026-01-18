@@ -11,12 +11,12 @@ app.use(express.json());
 app.use(cookieParesr());
 app.use(express.urlencoded({extended:true}));
 
-app.use(cors({
-  origin: "http://localhost:5173",
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
-}));
-
+// app.use(cors({
+//   origin: "http://localhost:5173",
+//   methods: ["GET", "POST", "PUT", "DELETE"],
+//   credentials: true
+// }));
+app.use(cors());
 sequelize.authenticate()
 .then(()=>console.log('DB connected'))
 .catch((err)=>console.log("db error",err));
@@ -30,6 +30,7 @@ app.get('/products', getallProductsController);
 app.get('/products/:id', getSingleProductController)
 app.use(isProtectedRoute);
 app.use('/vendor',isVendor,require('./routes/vendor'));
+app.use('/cart',require('./routes/cart/index'));
 
 app.use(require('./middlerware/error.middleware'));
-app.listen(3000,()=>console.log("app is running"));
+app.listen(8000,()=>console.log("app is running"));

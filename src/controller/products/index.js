@@ -2,7 +2,6 @@ const {
   createProduct,
   ListProduct,
   DeleteProduct,
-  getProductById,
   updateProduct,
   getSingleProduct
 } = require('../../services/products');

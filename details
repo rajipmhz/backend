@@ -79,3 +79,5 @@
 # checkout
 
 # --cart :id,user_id,item-id,noofitem,status:pending, checkout,out of stock
+
+# checkout:cart ko service, product ko service
