@@ -11,12 +11,12 @@ app.use(express.json());
 app.use(cookieParesr());
 app.use(express.urlencoded({extended:true}));
 
-// app.use(cors({
-//   origin: "http://localhost:5173",
-//   methods: ["GET", "POST", "PUT", "DELETE"],
-//   credentials: true
-// }));
-app.use(cors());
+app.use(cors({
+  origin: "http://localhost:5173",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+// app.use(cors());
 sequelize.authenticate()
 .then(()=>console.log('DB connected'))
 .catch((err)=>console.log("db error",err));

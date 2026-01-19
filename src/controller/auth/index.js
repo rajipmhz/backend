@@ -42,7 +42,9 @@ res.cookie('token',jwtToken,{
     maxAge:24*60*60*1000,
     samesite:'strict',
 })
-res.status(200).json({success:true,message:'userlogged in'})
+res.status(200).json({success:true,message:'userlogged in',
+    data:{id:user.id,name:user.name,email:user.email,type:user.type},
+})
 }
 module.exports={
 signupController,
